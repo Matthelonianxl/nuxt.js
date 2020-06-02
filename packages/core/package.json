@@ -8,7 +8,7 @@
   ],
   "main": "dist/core.js",
   "dependencies": {
-    "@nuxt/config": "2.10.1",
+    "@nuxt/config": "2.12.2",
     "@nuxt/devalue": "^1.2.4",
     "@nuxt/server": "2.10.1",
     "@nuxt/utils": "2.10.1",
