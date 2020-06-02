@@ -55,7 +55,7 @@
   "main": "dist/nuxt-start.js",
   "bin": "bin/nuxt-start.js",
   "dependencies": {
-    "@nuxt/cli": "2.10.1",
+    "@nuxt/cli": "2.12.2",
     "@nuxt/core": "2.10.1",
     "node-fetch": "^2.6.0",
     "vue": "^2.6.10",
