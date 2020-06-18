@@ -5,12 +5,16 @@
     "chart.js": "^2.7.1",
     "moment": "^2.18.1",
     "nuxt": "latest",
-    "vue-chartjs": "^3.1.0"
+    "vue-chartjs": "^3.1.0",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
