@@ -4,12 +4,16 @@
     "@vuikit/icons": "latest",
     "@vuikit/theme": "latest",
     "nuxt": "latest",
-    "vuikit": "latest"
+    "vuikit": "latest",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
