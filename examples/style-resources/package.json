@@ -3,16 +3,20 @@
   "dependencies": {
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "snyk": true
 }
