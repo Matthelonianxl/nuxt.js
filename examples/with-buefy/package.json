@@ -7,10 +7,14 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "nuxt": "latest",
-    "nuxt-buefy": "latest"
-  }
+    "nuxt-buefy": "latest",
+    "snyk": "^1.345.1"
+  },
+  "snyk": true
 }
