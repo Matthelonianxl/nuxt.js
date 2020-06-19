@@ -6,7 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "nuxt",
@@ -16,6 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",
-    "nuxt": "latest"
-  }
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
+  },
+  "snyk": true
 }
