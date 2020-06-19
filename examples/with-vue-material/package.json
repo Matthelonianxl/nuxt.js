@@ -4,12 +4,16 @@
   "dependencies": {
     "nuxt": "latest",
     "vue": "~2.4.4",
-    "vue-material": "beta"
+    "vue-material": "beta",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
