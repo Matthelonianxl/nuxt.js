@@ -6,10 +6,13 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -43,5 +46,6 @@
       "<rootDir>/pages/*.vue"
     ],
     "testURL": "http://localhost/"
-  }
+  },
+  "snyk": true
 }
