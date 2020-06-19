@@ -1,19 +1,23 @@
 {
   "name": "example-jest-puppeteer",
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "test": "jest -w=4",
-    "testServer": "nuxt build && nuxt start"
+    "testServer": "nuxt build && nuxt start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "jest": "latest",
     "jest-puppeteer": "latest",
     "puppeteer": "latest",
     "post-update": "yarn upgrade --latest"
-  }
+  },
+  "snyk": true
 }
