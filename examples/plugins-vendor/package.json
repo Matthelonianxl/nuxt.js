@@ -4,12 +4,16 @@
     "axios": "^0.19.0",
     "mini-toastr": "^0.6.5",
     "nuxt": "latest",
-    "vue-notifications": "^0.8.0"
+    "vue-notifications": "^0.8.0",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
