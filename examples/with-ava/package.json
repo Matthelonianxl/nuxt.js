@@ -5,13 +5,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "test": "ava --serial --verbose",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "ava": "^0.19.1",
     "jsdom": "^11.0.0"
   },
   "dependencies": {
-    "nuxt": "latest"
-  }
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
+  },
+  "snyk": true
 }
