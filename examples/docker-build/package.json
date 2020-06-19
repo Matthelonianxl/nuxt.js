@@ -4,12 +4,16 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt-start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "nuxt-start": "latest"
+    "nuxt-start": "latest",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "nuxt": "latest"
-  }
+  },
+  "snyk": true
 }
