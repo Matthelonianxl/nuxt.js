@@ -9,10 +9,13 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "surge -p dist/ -d https://nuxt-tailwindcss-purgecss.surge.sh",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "nuxt": "^2.2.0"
+    "nuxt": "^2.2.0",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
@@ -23,5 +26,6 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none"
-  }
+  },
+  "snyk": true
 }
