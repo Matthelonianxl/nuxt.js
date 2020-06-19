@@ -10,13 +10,16 @@
     "precommit": "yarn run lint",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybookoutput": "build-storybook -c .storybook -o .out",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "chart.js": "^2.7.1",
     "nuxt": "latest",
     "vue-chartjs": "^3.1.1",
-    "vuetify": "1.2.6"
+    "vuetify": "1.2.6",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.24",
@@ -31,5 +34,6 @@
     "babel-preset-vue": "^2.0.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
-  }
+  },
+  "snyk": true
 }
