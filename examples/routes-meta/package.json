@@ -2,12 +2,16 @@
   "name": "examples-routes-meta",
   "dependencies": {
     "nuxt": "latest",
-    "wingcss": "^1.0.0-beta"
+    "wingcss": "^1.0.0-beta",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
