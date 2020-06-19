@@ -18,7 +18,9 @@
     "build": "nuxt build",
     "start": "NODE_ENV=production node src/",
     "mocha": "mocha test/ --recursive --timeout=30000",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -35,7 +37,8 @@
     "nedb": "^1.8.0",
     "nuxt": "latest",
     "passport": "^0.3.2",
-    "winston": "^2.3.0"
+    "winston": "^2.3.0",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "eslint-plugin-mocha": "^4.11.0",
@@ -43,5 +46,6 @@
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "request": "^2.79.0"
-  }
+  },
+  "snyk": true
 }
