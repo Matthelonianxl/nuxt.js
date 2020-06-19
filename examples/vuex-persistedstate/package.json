@@ -2,12 +2,16 @@
   "name": "example-persisted-state",
   "dependencies": {
     "nuxt": "latest",
-    "vuex-persistedstate": "^2.0.0"
+    "vuex-persistedstate": "^2.0.0",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
