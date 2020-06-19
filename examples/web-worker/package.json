@@ -9,10 +9,13 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "post-update": "yarn upgrade --latest"
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -20,5 +23,6 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.5.0",
     "worker-loader": "^1.1.1"
-  }
+  },
+  "snyk": true
 }
