@@ -3,12 +3,16 @@
   "dependencies": {
     "nuxt": "latest",
     "uikit": "^3.0.0-beta.30",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "snyk": "^1.345.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
-  }
+    "post-update": "yarn upgrade --latest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
