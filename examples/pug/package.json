@@ -2,7 +2,7 @@
   "name": "example-pug",
   "dependencies": {
     "nuxt": "latest",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0"
   },
   "scripts": {
